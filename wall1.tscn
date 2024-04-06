@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://6yr6ffdeow4l"]
+
+[ext_resource type="Texture2D" uid="uid://bog33afy0y4vu" path="res://SCENE_WALL01_1920x1080_BG.png" id="1_sefi1"]
+[ext_resource type="Texture2D" uid="uid://dlb5q1lls1aoa" path="res://SCENE_WALL01_1920x1080_FG.png" id="1_yrtsl"]
+
+[sub_resource type="Gradient" id="Gradient_0c3lb"]
+interpolation_mode = 2
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e3pfk"]
+gradient = SubResource("Gradient_0c3lb")
+fill = 1
+fill_to = Vector2(20, 0)
+
+[node name="Wall1" type="Node2D"]
+scale = Vector2(1, 2)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(256, 128)
+scale = Vector2(0.266667, 0.237037)
+texture = ExtResource("1_sefi1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.266667, 0.237037)
+texture = ExtResource("1_yrtsl")
+centered = false
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(256, 144.798)
+rotation = 1.57079
+scale = Vector2(4.50696, 7.9578)
+energy = 5.54
+texture = SubResource("GradientTexture2D_e3pfk")
